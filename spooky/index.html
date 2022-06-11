@@ -1,7 +1,48 @@
+<!--
+PLAY PAUSE AUDIO LINK
+https://stackoverflow.com/questions/44358480/how-to-make-an-audio-play-pause-button
+-->
+
 <html>
   <head>
-    <style src="https://thepink.world/horiz-align.css">
+    <style>
+      .outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+      body {text-align:center;font-family:arial;background-color:black;color:green;}
     </style>
+    
+    <script>
+document.getElementById("playAudio").addEventListener("click", function(){
+	var audio = document.getElementById('testAudio');
+  if(this.className == 'is-playing'){
+    this.className = "";
+    this.innerHTML = "Play"
+    audio.pause();
+  }else{
+    this.className = "is-playing";
+    this.innerHTML = "Pause";
+    audio.play();
+  }
+
+});
+    </script>
   </head>
   
   <body>
@@ -9,8 +50,12 @@
 <div class="outer">
   <div class="middle">
     <div class="inner">
-      <h1>The Content</h1>
-      <p>Once upon a midnight dreary...</p>
+      
+      <audio id="testAudio" hidden src="https://dl.dropbox.com/s/vd9x2h9sypwp8il/spooktrack.wav?dl=1" type="audio/mpeg">
+</audio>
+
+<button id="playAudio">Let's get spooky!</button>
+      
     </div>
   </div>
 </div>
