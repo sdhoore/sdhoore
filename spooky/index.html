@@ -4,6 +4,9 @@ https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with
 
 OPEN LINK CLICK ANYWHERE
 https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
+
+REDIRECT
+https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
 -->
 
 <html>
@@ -57,7 +60,7 @@ body {
 	var isPlaying = false;
 
 	function togglePlay() {
-	  isPlaying ? myAudio.pause() : myAudio.play();
+	  isPlaying ? window.location.replace("https://thepink.world") : myAudio.play();
 	};
 
 	myAudio.onplaying = function() {
