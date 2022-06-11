@@ -5,9 +5,26 @@ https://www.copahost.com/blog/how-to-redirect-a-url-to-another-url/
 
 <html>
 <head>
-<meta http-equiv="refresh" content="2;randomSite();" />
 <title>Old page</title>
-  <script src="randomlink.js"></script>
+<script type="text/javascript">
+
+var urls = new Array();
+urls[0] = "http://learninginhand.com";
+urls[1] = "http://learninginhand.com/about";
+urls[2] = "http://learninginhand.com/contact";
+urls[4] = "http://learninginhand.com/services";
+urls[5] = "http://learninginhand.com/videos";
+urls[6] = "http://learninginhand.com/infographics";
+urls[7] = "http://learninginhand.com/resources";
+urls[8] = "http://learninginhand.com/stickaround";
+urls[9] = "http://learninginhand.com/posts";
+urls[10] = "http://learninginhand.com/pet";
+
+var random = Math.floor(Math.random()*urls.length);
+
+window.location = urls[random];
+
+</script>
 </head>
 <body>
 <h1 style="text-align:center;margin-top:20%;">effe twee seconden wachten joh</h1>
