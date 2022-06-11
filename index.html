@@ -21,6 +21,9 @@ https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-ele
 
 LINK NO UNDERLINE 
 https://www.computerhope.com/issues/ch000074.htm
+
+RANDOM LINK
+https://stackoverflow.com/questions/37751759/generating-a-random-link-through-javascript-html
 -->
 
 <head><title>ThePink.World</title>
@@ -88,6 +91,18 @@ table {width:100%;}
 
 </style>
 
+<script>
+    var sites = [
+        '/pers',
+        '/one'
+    ];
+
+    function randomSite() {
+        var i = parseInt(Math.random() * sites.length);
+        location.href = sites[i];
+    }
+</script>
+
 </head>
 
 <body>
@@ -100,7 +115,8 @@ table {width:100%;}
 <!--<div id="kop">
  <a href="/"><img class="ri" onMouseOver="this.style.cursor='pointer'" src="https://dl.dropbox.com/s/wj9t2gyomou71nt/pic.png?dl=1"></a>
 </div kop>-->
-<a href="/">ThePink.World</a>
+
+<a href="#" onclick="randomSite();">ThePink.World</a>
 
 <!-- 
 <div id="links-h">
