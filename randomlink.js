@@ -1,7 +1,6 @@
 var urls = new Array();
-urls[0] = "/one";
-urls[1] = "/two";
-urls[2] = "/spooky";
+urls[0] = "/spooky";
+urls[1] = "/anotherdayanotherworstebroodje";
 
 var random = Math.floor(Math.random()*urls.length);
 
