@@ -1,0 +1,78 @@
+<!--
+PLAY PAUSE AUDIO LINK
+https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
+
+OPEN LINK CLICK ANYWHERE
+https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
+
+BACKGROUND IMAGE
+https://www.w3schools.com/htmL/html_images_background.asp
+-->
+
+<html>
+  <head>
+    <style>
+      .outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+body {
+  background-image: url('https://dl.dropbox.com/s/9l2boiua5ehe8xu/Foto%2018-11-2020%2019%2014%2050.jpg?dl=1');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+    </style>
+    
+
+  </head>
+  
+  <body onclick="togglePlay()" src="https://dl.dropbox.com/s/jh1yb0gqvwz1xn3/spook.gif?dl=1">
+
+<div class="outer" onMouseOver="this.style.cursor='pointer'">
+  <div class="middle">
+    <div class="inner">
+
+	<audio id="myAudio" autoplay loop>
+	  <source src="https://dl.dropbox.com/s/9k3htrqwe75czpg/bakje%20patadt.wav?dl=1">
+	  Your browser does not support HTML5 video.
+	</audio>
+
+	<script> 
+	var myAudio = document.getElementById("myAudio");
+	var isPlaying = false;
+
+	function togglePlay() {
+	  isPlaying ? myAudio.pause() : myAudio.play();
+	};
+
+	myAudio.onplaying = function() {
+	  isPlaying = true;
+	};
+	myAudio.onpause = function() {
+	  isPlaying = false;
+	};
+	</script> 
+      
+    </div>
+  </div>
+</div>
+    
+  </body>
+</html>
