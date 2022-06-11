@@ -1,6 +1,9 @@
 <!--
 PLAY PAUSE AUDIO LINK
-https://stackoverflow.com/questions/44358480/how-to-make-an-audio-play-pause-button
+https://stackoverflow.com/questions/27368778/how-to-toggle-audio-play-pause-with-one-button-or-link
+
+OPEN LINK CLICK ANYWHERE
+https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
 -->
 
 <html>
@@ -28,33 +31,37 @@ https://stackoverflow.com/questions/44358480/how-to-make-an-audio-play-pause-but
       body {text-align:center;font-family:arial;background-color:black;color:green;}
     </style>
     
-    <script>
-document.getElementById("playAudio").addEventListener("click", function(){
-	var audio = document.getElementById('testAudio');
-  if(this.className == 'is-playing'){
-    this.className = "";
-    this.innerHTML = "Play"
-    audio.pause();
-  }else{
-    this.className = "is-playing";
-    this.innerHTML = "Pause";
-    audio.play();
-  }
 
-});
-    </script>
   </head>
   
-  <body>
-    
-<div class="outer">
+  <body onclick="togglePlay()" src="https://dl.dropbox.com/s/jh1yb0gqvwz1xn3/spook.gif?dl=1">
+
+<div class="outer" onMouseOver="this.style.cursor='pointer'">
   <div class="middle">
     <div class="inner">
-      
-      <audio id="testAudio" hidden src="https://dl.dropbox.com/s/vd9x2h9sypwp8il/spooktrack.wav?dl=1" type="audio/mpeg">
-</audio>
+     
+<a style="font-size:30;font-weight:bold;">LET'S GET SPOOKY!</a>
 
-<button id="playAudio">Let's get spooky!</button>
+	<audio id="myAudio" autoplay loop>
+	  <source src="https://dl.dropbox.com/s/vd9x2h9sypwp8il/spooktrack.wav?dl=1">
+	  Your browser does not support HTML5 video.
+	</audio>
+
+	<script> 
+	var myAudio = document.getElementById("myAudio");
+	var isPlaying = false;
+
+	function togglePlay() {
+	  isPlaying ? myAudio.pause() : myAudio.play();
+	};
+
+	myAudio.onplaying = function() {
+	  isPlaying = true;
+	};
+	myAudio.onpause = function() {
+	  isPlaying = false;
+	};
+	</script> 
       
     </div>
   </div>
