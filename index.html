@@ -24,6 +24,9 @@ https://www.computerhope.com/issues/ch000074.htm
 
 RANDOM LINK
 https://stackoverflow.com/questions/37751759/generating-a-random-link-through-javascript-html
+
+SCRIPT SRC
+https://www.w3schools.com/TAGS/att_script_src.asp
 -->
 
 <head><title>ThePink.World</title>
@@ -91,16 +94,7 @@ table {width:100%;}
 
 </style>
 
-<script>
-    var sites = [
-        'https://www.instagram.com/deathstarmacgyver/',
-        'https://open.spotify.com/artist/7IBi5YrhJPgXzgfCwslAvu?si=59BQrnz6TEmlfBMpSBCKUg'
-    ];
-
-    function randomSite() {
-        var i = parseInt(Math.random() * sites.length);
-        location.href = sites[i];
-    }
+<script src="randomlink.js">
 </script>
 
 </head>
