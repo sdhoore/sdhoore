@@ -8,6 +8,7 @@ https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
 
 <html>
   <head>
+	  <title>👻</title>
     <style>
       .outer {
   display: table;
@@ -28,21 +29,25 @@ https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
   margin-right: auto;
 }
 
-      body {text-align:center;font-family:arial;background-color:black;color:green;}
-    </style>
+	    
+body {
+  background-image: url('https://dl.dropbox.com/s/c2rkaaucysg5xjy/spooky.jpg?dl=1');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+	  </style>
     
 
   </head>
   
-  <body onclick="togglePlay()" src="https://dl.dropbox.com/s/jh1yb0gqvwz1xn3/spook.gif?dl=1">
+  <body onclick="togglePlay()">
 
 <div class="outer" onMouseOver="this.style.cursor='pointer'">
   <div class="middle">
     <div class="inner">
-     
-<a style="font-size:30;font-weight:bold;">LET'S GET SPOOKY!</a>
 
-	<audio id="myAudio" autoplay loop>
+	<audio id="myAudio" autoplay >
 	  <source src="https://dl.dropbox.com/s/vd9x2h9sypwp8il/spooktrack.wav?dl=1">
 	  Your browser does not support HTML5 video.
 	</audio>
@@ -69,3 +74,4 @@ https://stackoverflow.com/questions/23190856/html-open-link-click-anywhere
     
   </body>
 </html>
+
