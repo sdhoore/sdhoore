@@ -69,6 +69,12 @@ body {
 	myAudio.onpause = function() {
 	  isPlaying = false;
 	};
+
+	var aud = document.getElementById("myAudio");
+aud.onended = function() 
+{
+  window.location.replace("https://thepink.world");
+};
 	</script> 
       
     </div>
