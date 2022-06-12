@@ -10,6 +10,9 @@ https://www.w3schools.com/htmL/html_images_background.asp
 
 REDIRECT
 https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+
+PROMPT
+https://www.w3schools.com/jsref/met_win_prompt.asp
 -->
 
 <html>
@@ -72,6 +75,32 @@ body {
 	myAudio.onpause = function() {
 	  isPlaying = false;
 	};
+
+        var aud = document.getElementById("myAudio");
+aud.onended = function() 
+{
+  let text;
+  let favDrink = prompt("What's your favorite genre?", "lofi");
+  switch(favDrink) {
+    case "lofi":
+      alert("Didn't know it was a genre, just thought it meant poor quality...");
+      break;
+    case "rock":
+      alert("Yes U2 is also my favorite band!");
+      break;
+    case "jazz":
+      alert("You crazy street-cat! I dig yer style buster!");
+      break;
+    case "hip hop":
+      alert("Ah-said-a-hip-hop-a-hippie-a-you-will-surely-like-the-next-sing-a-song-a-ding-a-dong!");
+      break;
+    case "reggea":
+      alert("Well hold on to your dreads, this next one is right up your alley!");
+      break;
+      default: alert("Oh, you like " + favDrink + "? Then you'll really love what's next!");}
+  
+  window.location.replace("https://thepink.world");
+};
 	</script> 
       
     </div>
@@ -80,3 +109,4 @@ body {
     
   </body>
 </html>
+
