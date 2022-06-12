@@ -4,6 +4,12 @@ https://stackoverflow.com/questions/46185886/video-height-100vh-ignoring-overflo
 
 VIDEO INLINE
 https://css-tricks.com/what-does-playsinline-mean-in-web-video/
+
+CENTER VIDEO
+https://stackoverflow.com/questions/5879209/how-to-center-html5-videos
+
+ROTATE DIV
+https://stackoverflow.com/questions/14233341/how-to-rotate-a-div-90-degrees
 -->
 
 <html>
@@ -13,11 +19,19 @@ https://css-tricks.com/what-does-playsinline-mean-in-web-video/
 
 
 @media screen and (orientation: portrait) {
-#myVideo {height: 100vh;}
+#myVideo {height:100%;width:100%;
+    display: block;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);}
 }
 
 @media screen and (orientation: landscape) {
-#myVideo {height: 100%;width:100%;}
+#myVideo {height:100%;width:100%;margin-left: auto;
+    margin-right: auto;
+    display: block}
 }
 
       .outer {
@@ -53,7 +67,6 @@ https://css-tricks.com/what-does-playsinline-mean-in-web-video/
 
  <video id="myVideo" playsinline style="pointer-events: none;" poster="https://dl.dropbox.com/s/2y85z1nit89cxef/poster.png?dl=1">
   <source src="https://dl.dropbox.com/s/vrk2eiywxm0trpb/handsome.mp4?dl=1" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
   Your browser does not support the video tag.
 </video> 
 
