@@ -68,6 +68,13 @@ https://stackoverflow.com/questions/46185886/video-height-100vh-ignoring-overflo
 	myVideo.onpause = function() {
 	  isPlaying = false;
 	};
+		
+	var vid = document.getElementById("myVideo");
+vid.onended = function() 
+{
+  window.location.replace("https://thepink.world");
+};
+		
 	</script> 
       
     </div>
